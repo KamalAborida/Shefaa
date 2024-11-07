@@ -25,4 +25,8 @@
   &:disabled {
     background-color: gray;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -4,4 +4,13 @@
   align-items: center;
   width: 90%;
   margin: 10px auto;
+
+  &__navList {
+
+    &__item {
+      text-decoration: none;
+      color: $pale-light-blue;
+      font-weight: bold;
+    }
+  }
 }

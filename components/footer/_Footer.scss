@@ -47,3 +47,41 @@
     }
   }
 }
+
+@media screen and (min-width: 750px) {
+  .footer {
+    &__about {
+      margin-bottom: 36px;
+      width: 50%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    &__phoneDiv {
+      margin: 30px auto;
+      // border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      &__heading {
+        margin-bottom: unset;
+      }
+
+      &__phoneNumbers {
+        justify-content: space-between;
+        width: 50%;
+      }
+    }
+
+    &__socialMedia {
+      margin: 50px auto 10px auto;
+      width: 15%;
+
+      > div {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

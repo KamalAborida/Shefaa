@@ -30,7 +30,7 @@ export default function Footer({ phoneNumbers, socialMediaList }) {
         <div>
           {socialMediaList.map((socialMedia) => {
             return (
-              <Link key={socialMedia.id} href={socialMedia.link}>
+              <Link key={socialMedia.id} href={""}>
                 <Image src={getSocialMediaIcon(socialMedia.name)} alt={socialMedia.name} />
               </Link>
             );
