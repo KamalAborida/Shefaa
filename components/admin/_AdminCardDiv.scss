@@ -1,0 +1,18 @@
+.adminCardsDiv {
+  // border: 2px solid red;
+  width: 90%;
+  margin: 80px auto;
+
+  & > .cardsDiv {
+    margin: unset;
+    width: 100%;
+  
+    .card {
+      margin-bottom: 24px;
+      
+      &__contentDiv {
+        padding: 20px 36px 4px 36px;
+      }
+    }
+  }
+}

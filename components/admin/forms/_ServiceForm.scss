@@ -1,0 +1,30 @@
+.serviceForm {
+  width: 90%;
+  margin: 20px auto;
+
+  .inptDiv {
+    margin-bottom: 26px;
+  }
+
+  .btn {
+    margin: 20px auto;
+  }
+
+  .dropMenu {
+    margin: 26px auto;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    select {
+      width: 100%;
+      font-size: 16px;
+      border: 2px solid #cbd2e0;
+      border-radius: 6px;
+      padding: 10px;
+    }
+  }
+}

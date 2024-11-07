@@ -1,107 +1,656 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+.test {
+  width: 90%;
+  margin: 10px auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+.error {
+  color: red;
+  font-weight: 800;
 }
 
-* {
+.icon {
+  color: #394667;
+}
+
+*, *:before, *:after {
   box-sizing: border-box;
-  padding: 0;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
-html,
+footer, header, nav, section, main {
+  display: block;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  line-height: 1;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ol, ul {
+  list-style: none;
 }
 
-a {
-  color: inherit;
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+html {
+  font-family: var(--roboto_flex);
+  font-size: 16px;
+}
+
+p, label, select, * {
+  font-weight: 100;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+button {
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--noto_sans);
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.video {
+  width: 100%;
+  background-color: black;
+}
+
+.btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 20px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+}
+.btn-confirm {
+  background-color: #499AA0;
+}
+.btn-cancel {
+  background-color: #395153;
+}
+.btn-delete {
+  background-color: red;
+}
+.btn-call {
+  background-color: #C2B084;
+}
+.btn:disabled {
+  background-color: gray;
+}
+
+.card {
+  position: relative;
+  background-color: #596EA6;
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+}
+.card__img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px 8px 0 0;
+}
+.card__contentDiv {
+  padding: 20px 36px 30px 36px;
+}
+.card__heading {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.card__heading--info {
+  text-align: center;
+  margin-bottom: 0;
+}
+.card__priceTimeDiv {
+  margin: 20px 0 30px 0;
+}
+.card__priceTimeDiv__price {
+  margin-bottom: 0;
+}
+
+.inptDiv {
+  width: 100%;
+}
+.inptDiv__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.inptDiv__label--radio {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.inptDiv__inpt {
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #CBD2E0;
+  border-radius: 6px;
+  padding: 10px;
+}
+.inptDiv__inpt--radio {
+  font-size: 16px;
+  border: 2px solid #e0cbcb;
+  border-radius: 6px;
+  padding: 10px;
+}
+.inptDiv__inpt-err {
+  border: 2px solid red;
+  color: red;
+}
+.inptDiv__inpt-err::-moz-placeholder {
+  color: red;
+}
+.inptDiv__inpt-err::placeholder {
+  color: red;
+}
+.inptDiv__label-err {
+  color: red;
+}
+
+.footer {
+  margin-top: 60px;
+  background-color: #596EA6;
+  color: white;
+  padding: 24px 20px 30px 20px;
+}
+.footer__logo {
+  margin-bottom: 36px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__about {
+  margin-bottom: 36px;
+}
+.footer__phoneDiv {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.footer__phoneDiv__heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer__phoneDiv__phoneNumbers {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__socialMedia {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footer__socialMedia > div {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.cardsDiv {
+  margin: 48px auto;
+  width: 90%;
+}
+.cardsDiv > .card {
+  margin-bottom: 36px;
+}
+.cardsDiv__heading {
+  text-align: center;
+  color: #596EA6;
+  margin-bottom: 38px;
+}
+
+.appointmentForm {
+  width: 90%;
+  margin: 20px auto;
+}
+.appointmentForm > .inptDiv {
+  margin-bottom: 28px;
+}
+.appointmentForm > .btn {
+  margin-bottom: 28px;
+}
+.appointmentForm__heading {
+  margin-bottom: 36px;
+  font-size: 30px;
+  text-align: center;
+  color: #596EA6;
+  line-height: 150%;
+}
+.appointmentForm__hint {
+  margin-bottom: 36px;
+  color: #394667;
+}
+.appointmentForm__price {
+  color: #596EA6;
+  font-size: 40px;
+  margin-bottom: 36px;
+}
+.appointmentForm__radioBtnsDiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+  color: black;
+}
+.appointmentForm__radioBtnsDiv__label {
+  margin-bottom: 10px;
+}
+.appointmentForm__radioBtnsDiv__inpt {
+  margin-right: 10px;
+}
+
+.loadingForm {
+  z-index: 99;
+  padding: 20px;
+  font-size: 26px;
+  width: 90%;
+  position: absolute;
+  top: 25%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.loadingForm .logo {
+  margin-bottom: 30px;
+}
+
+.recipt {
+  color: #394667;
+  padding: 37px 20px;
+}
+.recipt > h1,
+.recipt h2,
+.recipt h3,
+.recipt h4,
+.recipt h5 {
+  color: #596EA6;
+}
+.recipt__heading {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 40px;
+}
+.recipt__infoDiv-personal {
+  margin: 36px 0;
+}
+.recipt__infoDiv-personal__heading {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.recipt__infoDiv-history {
+  margin: 36px 0;
+}
+.recipt__infoDiv-history__heading {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.recipt__infoDiv-notes {
+  margin: 36px 0;
+}
+.recipt__infoDiv-notes__heading {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.recipt__price {
+  font-size: 30px;
+  margin: 36px 0 10px 0;
+}
+.recipt__tip {
+  margin-bottom: 36px;
+}
+.recipt > .btn {
+  margin-bottom: 24px;
+}
+
+.successModal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 100;
+  background-color: rgb(31, 129, 31);
+  color: white;
+  text-align: center;
+  padding: 2.5em;
+  border-radius: 10px;
+  font-weight: 800;
+}
+.successModal__p-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+.successModal__p-note {
+  margin-bottom: 20px;
+}
+.successModal__link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.86);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+}
+
+.navModal {
+  background-color: #394667;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
+}
+.navModal__list {
+  margin: 40px auto;
+  width: 50%;
+  text-align: center;
+}
+.navModal__list a {
+  text-decoration: none;
+}
+.navModal__list__li {
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: white;
+}
+.navModal__list__li:-moz-any-link {
+  text-decoration: none;
+}
+.navModal__list__li:any-link, .navModal__list__li:link {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.adminLoginForm {
+  width: 90%;
+  margin: 20px auto;
+}
+.adminLoginForm > .inptDiv {
+  margin: 20px 0;
+}
+.adminLoginForm > .btn {
+  margin: 20px 0;
+}
+
+.adminCardsDiv {
+  width: 90%;
+  margin: 80px auto;
+}
+.adminCardsDiv > .cardsDiv {
+  margin: unset;
+  width: 100%;
+}
+.adminCardsDiv > .cardsDiv .card {
+  margin-bottom: 24px;
+}
+.adminCardsDiv > .cardsDiv .card__contentDiv {
+  padding: 20px 36px 4px 36px;
+}
+
+.jobsDiv {
+  width: 90%;
+  text-align: center;
+  margin: 100px auto;
+  background-color: rgb(237, 237, 237);
+  padding: 2em 2em 5px 2em;
+  border-radius: 15px;
+  color: #596EA6;
+}
+.jobsDiv__title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #394667;
+}
+
+.infoDiv {
+  text-align: center;
+  margin: 30px auto;
+}
+.infoDiv__title {
+  font-size: 30px;
+  color: #394667;
+  margin-bottom: 36px;
+}
+.infoDiv__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 40px auto;
+  font-size: 24px;
+  color: #596EA6;
+}
+.infoDiv__form {
+  width: 70%;
+  margin: 20px auto;
+}
+.infoDiv__form .btn {
+  margin: 20px 0;
+}
+
+.socialMediaDiv {
+  text-align: center;
+  margin-top: 80px;
+}
+.socialMediaDiv__title {
+  font-size: 30px;
+  color: #394667;
+}
+.socialMediaDiv__socialMediaIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 20px auto;
+}
+.socialMediaDiv__form {
+  width: 70%;
+  margin: 20px auto;
+}
+.socialMediaDiv__form .btn {
+  margin: 20px 0 0 0;
+}
+
+.serviceForm {
+  width: 90%;
+  margin: 20px auto;
+}
+.serviceForm .inptDiv {
+  margin-bottom: 26px;
+}
+.serviceForm .btn {
+  margin: 20px auto;
+}
+.serviceForm .dropMenu {
+  margin: 26px auto;
+}
+.serviceForm .dropMenu label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.serviceForm .dropMenu select {
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #cbd2e0;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.infoForm {
+  width: 90%;
+  margin: 20px auto;
+}
+.infoForm hr {
+  margin: 40px 0;
+}
+.infoForm .inptDiv {
+  margin-bottom: 26px;
+}
+.infoForm .btn {
+  margin: 20px auto;
+}
+
+.jobsDiv__list .imp-info {
+  font-weight: 800;
+  font-size: 15px;
+  color: #394667;
+}
+.jobsDiv__list-showDetails {
+  background-color: rgb(215, 215, 215);
+  padding: 1em;
+  border-radius: 8px;
+}
+.jobsDiv__list__li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.jobsDiv__list__li__jobInfoDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.jobsDiv__list__li__jobDetailsDiv__phoneCopied {
+  margin: 20px auto 5px auto;
+  color: #499AA0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+.jobsDiv__list__li__jobDetailsDiv__p {
+  margin-bottom: 10px;
+}
+.jobsDiv__list__li__jobDetailsDiv__disease {
+  margin: 30px 0;
+}
+.jobsDiv__list__li__jobDetailsDiv__disease__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.jobsDiv__list__li__jobDetailsDiv__disease__p {
+  font-size: 20px;
+}
+.jobsDiv__list__li__jobDetailsDiv__notes {
+  margin: 30px 0;
+}
+.jobsDiv__list__li__jobDetailsDiv__notes__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.jobsDiv__list__li__jobDetailsDiv__notes__p {
+  font-size: 20px;
+}
+.jobsDiv__list__li__jobDetailsDiv__btnsDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.jobsDiv__list__li__jobDetailsDiv__btnsDiv .btn {
+  font-size: 15px;
+  font-weight: 800;
+  width: 30%;
+}
+.jobsDiv__list__li__jobDetailsDiv__btnsDiv .btn:disabled {
+  background-color: grey;
+  color: rgb(104, 104, 104);
+  cursor: not-allowed;
+}
+.jobsDiv__list__li__jobDetailsDiv__confirmationDivDiv {
+  margin: 40px 0;
+}
+.jobsDiv__list__li__jobDetailsDiv__confirmationDivDiv input {
+  border-radius: 0;
+  width: 100%;
+}
+.jobsDiv__list__li__jobDetailsDiv__confirmationDivDiv .btn {
+  border-radius: 0;
+  width: 100%;
+}
+
+.loginPage .logoDiv {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.adminPage__settingsDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px auto;
+  padding: 10px 20px 0 0;
+}
+.adminPage__logoDiv {
+  text-align: center;
+  margin: 40px auto 80px auto;
+}
+.adminPage__logoDiv .logo {
+  transform: scale(1.5);
+}
+
+.loadingDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loadingDiv .logo {
+  margin-bottom: 30px;
 }

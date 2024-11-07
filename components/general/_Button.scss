@@ -1,0 +1,28 @@
+.btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 20px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+
+  &-confirm {
+    background-color: $pale-light-green;
+  }
+
+  &-cancel {
+    background-color: $pale-dark-green;
+  }
+
+  &-delete {
+    background-color: red;
+  }
+
+  &-call {
+    background-color: $pale-dark-yellow;
+  }
+
+  &:disabled {
+    background-color: gray;
+  }
+}

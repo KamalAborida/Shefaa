@@ -1,0 +1,109 @@
+.jobsDiv {
+  &__list {
+    // border: 2px solid red;
+
+    .imp-info {
+      font-weight: 800;
+      font-size: 15px;
+      color: $pale-dark-blue;
+    }
+
+    &-showDetails {
+      background-color: rgb(215, 215, 215);
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    &__li {
+      // border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      // max-width: 25%;
+      font-size: 24px;
+      margin-bottom: 40px;
+      text-align: left;
+
+      &__jobInfoDiv {
+        // border: 5px solid yellow;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      &__jobDetailsDiv {
+        &__phoneCopied {
+          margin: 20px auto 5px auto;
+          color: $pale-light-green;
+          font-weight: bold;
+          text-align: center;
+          font-size: 20px;
+        }
+
+        &__p {
+          margin-bottom: 10px;
+        }
+
+        &__disease {
+          margin: 30px 0;
+
+          &__title {
+            font-size: 30px;
+            margin-bottom: 10px;
+          }
+
+          &__p {
+            font-size: 20px;
+          }
+        }
+
+        &__notes {
+          margin: 30px 0;
+
+          &__title {
+            font-size: 30px;
+            margin-bottom: 10px;
+          }
+
+          &__p {
+            font-size: 20px;
+          }
+        }
+
+        &__btnsDiv {
+          // border: 2px solid red;
+          display: flex;
+          justify-content: space-between;
+
+          .btn {
+            font-size: 15px;
+            font-weight: 800;
+            width: 30%;
+
+            &:disabled {
+              background-color: grey;
+              color: rgb(104, 104, 104);
+              cursor: not-allowed;
+            }
+          }
+        }
+
+        &__confirmationDivDiv {
+          // border: 2px solid red;
+          margin: 40px 0;
+
+          input {
+            border-radius: 0;
+            width: 100%;
+          }
+
+          .btn {
+            border-radius: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

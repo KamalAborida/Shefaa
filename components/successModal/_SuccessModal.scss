@@ -1,0 +1,28 @@
+.successModal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 100;
+  background-color: rgb(31, 129, 31);
+  color: white;
+  text-align: center;
+  padding: 2.5em;
+  border-radius: 10px;
+  font-weight: 800;
+
+  &__p-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  &__p-note {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+}

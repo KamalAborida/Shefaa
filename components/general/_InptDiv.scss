@@ -1,0 +1,44 @@
+.inptDiv {
+  width: 100%;
+  
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  &__label--radio {
+    // display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  &__inpt {
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #CBD2E0;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  &__inpt--radio {
+    // width: 100%;
+    font-size: 16px;
+    border: 2px solid #e0cbcb;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  &__inpt-err {
+    border: 2px solid red;
+    color: red;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+
+  &__label-err {
+    color: red;
+  }
+}

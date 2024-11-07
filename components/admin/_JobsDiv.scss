@@ -1,0 +1,15 @@
+.jobsDiv {
+  width: 90%;
+  text-align: center;
+  margin: 100px auto;
+  background-color: rgb(237, 237, 237);
+  padding: 2em 2em 5px 2em;
+  border-radius: 15px;
+  color: $pale-light-blue;
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: $pale-dark-blue;
+  }
+}

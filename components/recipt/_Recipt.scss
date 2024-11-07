@@ -1,0 +1,55 @@
+.recipt {
+  color: $pale-dark-blue;
+  padding: 37px 20px;
+
+  > h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $pale-light-blue;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 40px;
+  }
+
+  &__infoDiv-personal {
+    margin: 36px 0;
+    &__heading {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__infoDiv-history {
+    margin: 36px 0;
+    &__heading {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__infoDiv-notes {
+    margin: 36px 0;
+    &__heading {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__price {
+    font-size: 30px;
+    margin: 36px 0 10px 0;
+  }
+
+  &__tip {
+    margin-bottom: 36px;
+  }
+
+  & > .btn {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,46 @@
+.appointmentForm {
+  width: 90%;
+  margin: 20px auto;
+
+  > .inptDiv {
+    margin-bottom: 28px;
+  }
+
+  > .btn {
+    margin-bottom: 28px;
+  }
+
+  &__heading {
+    margin-bottom: 36px;
+    font-size: 30px;
+    text-align: center;
+    color: $pale-light-blue;
+    line-height: 150%;
+  }
+
+  &__hint {
+    margin-bottom: 36px;
+    color: $pale-dark-blue;
+  }
+
+  &__price {
+    color: $pale-light-blue;
+    font-size: 40px;
+    margin-bottom: 36px;
+  }
+
+  &__radioBtnsDiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    color: black;
+
+    &__label {
+      margin-bottom: 10px;
+    }
+
+    &__inpt {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.footer {
+  margin-top: 60px;
+  background-color: $pale-light-blue;
+  color: white;
+  padding: 24px 20px 30px 20px;
+
+  &__logo {
+    margin-bottom: 36px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__about {
+    margin-bottom: 36px;
+    // width: 100%;
+  }
+
+  &__phoneDiv {
+    text-align: center;
+    margin-bottom: 36px;
+    // width: 70%;
+    // border: 2px solid red;
+    &__heading {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__phoneNumbers {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__socialMedia {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 100%;
+
+    > div {
+      display: flex;
+      // border: 1px solid red;
+      width: 80%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

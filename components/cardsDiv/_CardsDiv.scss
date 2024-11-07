@@ -1,0 +1,14 @@
+.cardsDiv {
+  margin: 48px auto;
+  width: 90%;
+
+  > .card {
+    margin-bottom: 36px;
+  }
+
+  &__heading {
+    text-align: center;
+    color: $pale-light-blue;
+    margin-bottom: 38px;
+  }
+}

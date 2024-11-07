@@ -1,0 +1,49 @@
+$pale-light-green: #499AA0;
+$pale-dark-green: #395153;
+$pale-dark-yellow: #C2B084;
+$pale-light-blue: #596EA6;
+$pale-dark-blue: #394667;
+
+.test {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.error {
+  color: red;
+  font-weight: 800;
+}
+
+.icon {
+  color: $pale-dark-blue
+}
+
+@import "./style/reset";
+@import "./style/base";
+
+@import "./components/general/Button";
+@import "./components/general/Card";
+@import "./components/general/InptDiv";
+
+@import "./components/footer/Footer";
+@import "./components/nav/Nav";
+@import "./components/cardsDiv/CardsDiv";
+@import "./components/form/AppointmnetForm";
+@import "./components/form/Loading";
+@import "./components/recipt/Recipt";
+@import "./components/successModal/SuccessModal";
+@import "./components/successModal/BackDrop";
+@import "./components/nav/NavModal";
+@import "./components/form/AdminLoginFom";
+@import "./components/admin/AdminCardDiv";
+@import "./components/admin/JobsDiv";
+@import "./components/admin/ShefaaInfoDiv";
+@import "./components/admin/SocialMediaDiv";
+@import "./components/admin/forms/ServiceForm";
+@import "./components/admin/forms/InfoForm";
+@import "./components/admin/Job";
+@import "./components/admin/UpComingJob";
+
+@import "./app/Login/page";
+@import "./app/Admin/page";
+@import "./app/loading";

@@ -1,0 +1,31 @@
+.navModal {
+  background-color: $pale-dark-blue;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
+
+  &__list {
+    margin: 40px auto;
+    width: 50%;
+    text-align: center;
+    // border: 1px solid red;
+
+    a {
+      text-decoration: none;
+    }
+
+    &__li {
+      margin-bottom: 40px;
+      font-size: 40px;
+      color: white;
+
+      &:any-link,
+      &:link {
+        text-decoration: none;
+      }
+    }
+  }
+}

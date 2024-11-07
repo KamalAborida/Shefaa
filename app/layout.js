@@ -1,7 +1,17 @@
-import { Inter } from "next/font/google";
+import { Noto_Sans, Roboto_Flex } from "next/font/google";
 import "./globals.css";
+import NavModal from "@/components/nav/NavModal";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto_Sans = Noto_Sans({
+  weight: ["500", "700"],
+  variable: "--noto_sans",
+  subsets: ["latin"],
+});
+const roboto_Flex = Roboto_Flex({
+  weight: ["100", "300", "400", "600"],
+  variable: "--roboto_flex",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +20,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${noto_Sans.variable} ${roboto_Flex.variable}`}>
+      <body>
+        {children}
+        <NavModal />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,22 @@
+.loadingForm {
+  z-index: 99;
+  padding: 20px;
+  font-size: 26px;
+  width: 90%;
+  position: absolute;
+  top: 25%;
+  // left: 50%;
+  // top: 25%;
+  // transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // border: 2px solid red;
+
+  .logo {
+    margin-bottom: 30px;
+  }
+}
